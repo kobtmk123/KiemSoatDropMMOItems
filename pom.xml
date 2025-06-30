@@ -12,7 +12,7 @@
     <name>KiemSoatDropMMOItems</name>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -21,17 +21,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <!-- SỬA LỖI: Nâng cấp phiên bản Java lên 21 để tương thích với Purpur 1.21 API -->
-                    <source>21</source>
-                    <target>21</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -51,18 +50,18 @@
     </build>
 
     <repositories>
-        <!-- Repository của Purpur để lấy API -->
+        <!-- SỬA LỖI: Chuyển sang repository của PaperMC để đảm bảo tính ổn định -->
         <repository>
-            <id>purpurmc-repo</id>
-            <url>https://repo.purpurmc.org/snapshots</url>
+            <id>papermc-repo</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- API của Purpur cho phiên bản 1.21 -->
+        <!-- SỬA LỖI: Sử dụng paper-api thay vì purpur-api để khắc phục lỗi biên dịch -->
         <dependency>
-            <groupId>org.purpurmc.purpur</groupId>
-            <artifactId>purpur-api</artifactId>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
             <version>1.21-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>

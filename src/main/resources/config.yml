@@ -1,0 +1,32 @@
+# ========================================================= #
+#       Plugin KiemSoatDropMMOItems by Hoàng Nghĩa dz            #
+# ========================================================= #
+# Day la file cau hinh chinh. Ban co the bat/tat cac tinh nang tai day.
+
+settings:
+  # Bat/Tat tinh nang kiem tra block do nguoi choi dat.
+  # Neu 'true', block nguoi choi dat (vi du: dat 1 khúc gỗ rồi đập) se khong roi ra item tu MMOItems.
+  # Neu 'false', tat tinh nang nay va cho phep drop binh thuong.
+  check-player-placed-blocks: true
+
+  # Bat/Tat tinh nang kiem tra do lon cua cay trong.
+  # Neu 'true', cay trong (lúa, cà rốt...) phai lon toi da (chin) moi roi ra item tu MMOItems.
+  # Neu 'false', tat tinh nang nay.
+  check-crop-growth: true
+
+  # (Nang cao) Danh sach cac loai block duoc mien tru kiem tra.
+  # Cac block trong danh sach nay se LUON LUON co the roi ra item MMOItems,
+  # ke ca khi do nguoi choi dat.
+  # Su dung ten Material cua Bukkit: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  # Vi du:
+  # exempt-blocks:
+  #   - 'DIAMOND_BLOCK'
+  #   - 'GOLD_BLOCK'
+  exempt-blocks: []
+
+# Thong diep cua plugin, ho tro ma mau (&a, &b, &c...)
+messages:
+  prefix: "&e&l[KS-Drop] &r"
+  reload-success: "&aDa tai lai cau hinh thanh cong!"
+  no-permission: "&cBan khong co quyen su dung lenh nay."
+  invalid-command: "&cLenh khong hop le. Su dung /ksdrop reload."

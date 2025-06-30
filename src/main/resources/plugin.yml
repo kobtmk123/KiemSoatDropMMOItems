@@ -1,0 +1,21 @@
+name: KiemSoatDropMMOItems
+version: '${project.version}'
+main: com.github.kiemsoatdrop.KiemSoatDropMMOItems
+api-version: '1.20'
+author: AI Helper
+description: Kiem soat drop item tu MMOItems de chong farm bug tu block do nguoi choi dat va cay trong chua lon.
+
+# Quan trọng: Đảm bảo plugin này được load SAU MMOItems
+depend: [MMOItems]
+
+commands:
+  ksdrop:
+    description: Lenh quan ly cua plugin KiemSoatDropMMOItems.
+    usage: /ksdrop reload
+    permission: ksdrop.admin
+    aliases: [kiemsoatdrop]
+
+permissions:
+  ksdrop.admin:
+    description: Cho phep su dung lenh /ksdrop reload.
+    default: op

@@ -6,7 +6,7 @@
 
     <groupId>com.github.kiemsoatdrop</groupId>
     <artifactId>KiemSoatDropMMOItems</artifactId>
-    <version>1.1</version> <!-- Cập nhật phiên bản -->
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <name>KiemSoatDropMMOItems</name>
@@ -54,10 +54,10 @@
             <id>purpurmc-repo</id>
             <url>https://repo.purpurmc.org/snapshots</url>
         </repository>
-        <!-- Thêm repo của MythicCrafts (cần cho MythicLib) -->
         <repository>
             <id>mythic-repo</id>
-            <url>https://nexus.mythiccraft.io/repository/mythic/</url>
+            <!-- SỬA LỖI: ĐÂY LÀ ĐƯỜNG DẪN ĐÚNG VÀ ĐANG HOẠT ĐỘNG -->
+            <url>https://repo.mythiccraft.io/repository/mythic-public/</url>
         </repository>
     </repositories>
 
@@ -68,11 +68,10 @@
             <version>1.21-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Thêm dependency của MythicLib để sử dụng event của MMOItems -->
         <dependency>
             <groupId>io.lumine</groupId>
             <artifactId>MythicLib</artifactId>
-            <version>1.6.1</version> <!-- Sử dụng phiên bản MythicLib tương ứng với MMOItems của bạn -->
+            <version>1.6.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

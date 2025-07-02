@@ -55,9 +55,9 @@
             <url>https://repo.purpurmc.org/snapshots</url>
         </repository>
         <repository>
-            <id>mythic-repo</id>
-            <!-- SỬA LỖI: ĐÂY LÀ ĐƯỜNG DẪN ĐÚNG VÀ ĐANG HOẠT ĐỘNG -->
-            <url>https://repo.mythiccraft.io/repository/mythic-public/</url>
+            <id>lumine-repo</id>
+            <!-- SỬA LỖI CUỐI CÙNG: ĐÂY LÀ ĐƯỜNG DẪN CHÍNH THỨC VÀ ỔN ĐỊNH CỦA LUMINE -->
+            <url>https://repo.lumine.io/repository/maven-public/</url>
         </repository>
     </repositories>
 

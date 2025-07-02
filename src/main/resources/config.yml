@@ -1,7 +1,8 @@
 # ========================================================= #
-#       Plugin KiemSoatDropMMOItems by Hoàng Nghĩa dz            #
+#    Plugin KiemSoatDropMMOItems v1.1 by Hoàng           #
 # ========================================================= #
 # Day la file cau hinh chinh. Ban co the bat/tat cac tinh nang tai day.
+# De xem huong dan chi tiet va ma nguon, truy cap: https://github.com/AI-Helper-Code-Bot/KiemSoatDropMMOItems
 
 settings:
   # Bat/Tat tinh nang kiem tra block do nguoi choi dat.
@@ -15,13 +16,6 @@ settings:
   check-crop-growth: true
 
   # (Nang cao) Danh sach cac loai block duoc mien tru kiem tra.
-  # Cac block trong danh sach nay se LUON LUON co the roi ra item MMOItems,
-  # ke ca khi do nguoi choi dat.
-  # Su dung ten Material cua Bukkit: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-  # Vi du:
-  # exempt-blocks:
-  #   - 'DIAMOND_BLOCK'
-  #   - 'GOLD_BLOCK'
   exempt-blocks: []
 
 # Thong diep cua plugin, ho tro ma mau (&a, &b, &c...)

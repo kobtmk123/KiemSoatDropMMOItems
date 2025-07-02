@@ -6,22 +6,20 @@ public final class KiemSoatDropMMOItems extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Sao chép config.yml mặc định nếu chưa có
         saveDefaultConfig();
 
-        // Đăng ký Listener để lắng nghe các sự kiện của block
+        // Đăng ký cả hai listener cần thiết
         getServer().getPluginManager().registerEvents(new BlockListener(this), this);
+        getServer().getPluginManager().registerEvents(new MMOItemsListener(this), this);
 
         // Đăng ký lệnh /ksdrop
         this.getCommand("ksdrop").setExecutor(new ReloadCommand(this));
 
-        // Ghi log ra console
-        getLogger().info("Plugin KiemSoatDropMMOItems da duoc bat.");
-        getLogger().info("Plugin se ngan chan viec farm item tu block do nguoi choi dat.");
+        getLogger().info("Plugin KiemSoatDropMMOItems v1.1 da duoc bat.");
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("Plugin KiemSoatDropMMOItems da duoc tat.");
+        getLogger().info("Plugin KiemSoatDropMMOItems v1.1 da duoc tat.");
     }
 }

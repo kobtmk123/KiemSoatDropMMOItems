@@ -6,13 +6,13 @@
 
     <groupId>com.github.kiemsoatdrop</groupId>
     <artifactId>KiemSoatDropMMOItems</artifactId>
-    <version>1.0</version>
+    <version>1.1</version> <!-- Cập nhật phiên bản -->
     <packaging>jar</packaging>
 
     <name>KiemSoatDropMMOItems</name>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -21,7 +21,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -30,7 +30,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.4.1</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -50,19 +50,29 @@
     </build>
 
     <repositories>
-        <!-- SỬA LỖI: Chuyển sang repository của PaperMC để đảm bảo tính ổn định -->
         <repository>
-            <id>papermc-repo</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
+            <id>purpurmc-repo</id>
+            <url>https://repo.purpurmc.org/snapshots</url>
+        </repository>
+        <!-- Thêm repo của MythicCrafts (cần cho MythicLib) -->
+        <repository>
+            <id>mythic-repo</id>
+            <url>https://nexus.mythiccraft.io/repository/mythic/</url>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- SỬA LỖI: Sử dụng paper-api thay vì purpur-api để khắc phục lỗi biên dịch -->
         <dependency>
-            <groupId>io.papermc.paper</groupId>
-            <artifactId>paper-api</artifactId>
+            <groupId>org.purpurmc.purpur</groupId>
+            <artifactId>purpur-api</artifactId>
             <version>1.21-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Thêm dependency của MythicLib để sử dụng event của MMOItems -->
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicLib</artifactId>
+            <version>1.6.1</version> <!-- Sử dụng phiên bản MythicLib tương ứng với MMOItems của bạn -->
             <scope>provided</scope>
         </dependency>
     </dependencies>

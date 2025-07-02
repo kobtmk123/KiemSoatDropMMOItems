@@ -19,14 +19,12 @@ public class ReloadCommand implements CommandExecutor {
         String prefix = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.prefix", "&e&l[KS-Drop] &r"));
 
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
-            // Kiểm tra quyền
             if (!sender.hasPermission("ksdrop.admin")) {
                 String noPermMsg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.no-permission", "&cBan khong co quyen su dung lenh nay."));
                 sender.sendMessage(prefix + noPermMsg);
                 return true;
             }
 
-            // Tải lại config
             plugin.reloadConfig();
 
             String successMsg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.reload-success", "&aDa tai lai cau hinh thanh cong!"));
@@ -34,7 +32,6 @@ public class ReloadCommand implements CommandExecutor {
             return true;
         }
 
-        // Hướng dẫn sử dụng lệnh
         String invalidCmdMsg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.invalid-command", "&cLenh khong hop le. Su dung /ksdrop reload."));
         sender.sendMessage(prefix + invalidCmdMsg);
         return true;
